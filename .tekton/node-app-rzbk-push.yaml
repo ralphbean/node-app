@@ -179,6 +179,14 @@ spec:
       workspaces:
       - name: source
         workspace: workspace
+    - name: hello
+      taskSpec:
+        steps:
+          - name: echo
+            image: alpine
+            script: |
+              #!/bin/sh
+              echo "Hello Burr!"
     - name: sanity-inspect-image
       params:
       - name: IMAGE_URL
